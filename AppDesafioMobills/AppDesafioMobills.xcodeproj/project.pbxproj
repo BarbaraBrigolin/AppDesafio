@@ -14,6 +14,8 @@
 		03984D8A26BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03984D8826BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld */; };
 		03984D8C26BF0F8A005D0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8B26BF0F8A005D0079 /* Assets.xcassets */; };
 		03984D8F26BF0F8A005D0079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8D26BF0F8A005D0079 /* LaunchScreen.storyboard */; };
+		03984DBA26BF12E8005D0079 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03984DB926BF12E8005D0079 /* GoogleService-Info.plist */; };
+		9D14A06D4B9B160E20B72F18 /* Pods_AppDesafioMobills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		03984D8B26BF0F8A005D0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03984D8E26BF0F8A005D0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03984D9026BF0F8A005D0079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03984DB926BF12E8005D0079 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.release.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.release.xcconfig"; sourceTree = "<group>"; };
+		C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppDesafioMobills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.debug.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D14A06D4B9B160E20B72F18 /* Pods_AppDesafioMobills.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				03984D7E26BF0F88005D0079 /* AppDesafioMobills */,
 				03984D7D26BF0F88005D0079 /* Products */,
+				D7551552CC956070BBA995A1 /* Pods */,
+				ACBF558CD0F8287FBBFFDF35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +75,27 @@
 				03984D8D26BF0F8A005D0079 /* LaunchScreen.storyboard */,
 				03984D9026BF0F8A005D0079 /* Info.plist */,
 				03984D8826BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld */,
+				03984DB926BF12E8005D0079 /* GoogleService-Info.plist */,
 			);
 			path = AppDesafioMobills;
+			sourceTree = "<group>";
+		};
+		ACBF558CD0F8287FBBFFDF35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7551552CC956070BBA995A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */,
+				55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03984D9326BF0F8A005D0079 /* Build configuration list for PBXNativeTarget "AppDesafioMobills" */;
 			buildPhases = (
+				5AFEA3FA57827F74A89EEE95 /* [CP] Check Pods Manifest.lock */,
 				03984D7826BF0F88005D0079 /* Sources */,
 				03984D7926BF0F88005D0079 /* Frameworks */,
 				03984D7A26BF0F88005D0079 /* Resources */,
+				43E5A699A454FFBA6264DB50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03984DBA26BF12E8005D0079 /* GoogleService-Info.plist in Resources */,
 				03984D8F26BF0F8A005D0079 /* LaunchScreen.storyboard in Resources */,
 				03984D8C26BF0F8A005D0079 /* Assets.xcassets in Resources */,
 				03984D8726BF0F88005D0079 /* Main.storyboard in Resources */,
@@ -134,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43E5A699A454FFBA6264DB50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AFEA3FA57827F74A89EEE95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppDesafioMobills-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03984D7826BF0F88005D0079 /* Sources */ = {
@@ -287,6 +360,7 @@
 		};
 		03984D9426BF0F8A005D0079 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +379,7 @@
 		};
 		03984D9526BF0F8A005D0079 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
