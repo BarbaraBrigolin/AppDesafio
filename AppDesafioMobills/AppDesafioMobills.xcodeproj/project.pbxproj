@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		03984D8026BF0F88005D0079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984D7F26BF0F88005D0079 /* AppDelegate.swift */; };
 		03984D8226BF0F88005D0079 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984D8126BF0F88005D0079 /* SceneDelegate.swift */; };
-		03984D8426BF0F88005D0079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984D8326BF0F88005D0079 /* ViewController.swift */; };
+		03984D8426BF0F88005D0079 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984D8326BF0F88005D0079 /* LoginVC.swift */; };
 		03984D8726BF0F88005D0079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8526BF0F88005D0079 /* Main.storyboard */; };
 		03984D8A26BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03984D8826BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld */; };
 		03984D8C26BF0F8A005D0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8B26BF0F8A005D0079 /* Assets.xcassets */; };
@@ -22,7 +22,7 @@
 		03984D7C26BF0F88005D0079 /* AppDesafioMobills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDesafioMobills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03984D7F26BF0F88005D0079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03984D8126BF0F88005D0079 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03984D8326BF0F88005D0079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03984D8326BF0F88005D0079 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		03984D8626BF0F88005D0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03984D8926BF0F88005D0079 /* AppDesafioMobills.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppDesafioMobills.xcdatamodel; sourceTree = "<group>"; };
 		03984D8B26BF0F8A005D0079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 		03984D7E26BF0F88005D0079 /* AppDesafioMobills */ = {
 			isa = PBXGroup;
 			children = (
+				03984DC026BF6D92005D0079 /* ScreensVC */,
 				03984D7F26BF0F88005D0079 /* AppDelegate.swift */,
 				03984D8126BF0F88005D0079 /* SceneDelegate.swift */,
-				03984D8326BF0F88005D0079 /* ViewController.swift */,
 				03984D8526BF0F88005D0079 /* Main.storyboard */,
 				03984D8B26BF0F8A005D0079 /* Assets.xcassets */,
 				03984D8D26BF0F8A005D0079 /* LaunchScreen.storyboard */,
@@ -78,6 +78,14 @@
 				03984DB926BF12E8005D0079 /* GoogleService-Info.plist */,
 			);
 			path = AppDesafioMobills;
+			sourceTree = "<group>";
+		};
+		03984DC026BF6D92005D0079 /* ScreensVC */ = {
+			isa = PBXGroup;
+			children = (
+				03984D8326BF0F88005D0079 /* LoginVC.swift */,
+			);
+			path = ScreensVC;
 			sourceTree = "<group>";
 		};
 		ACBF558CD0F8287FBBFFDF35 /* Frameworks */ = {
@@ -94,7 +102,6 @@
 				DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */,
 				55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03984D8A26BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld in Sources */,
-				03984D8426BF0F88005D0079 /* ViewController.swift in Sources */,
+				03984D8426BF0F88005D0079 /* LoginVC.swift in Sources */,
 				03984D8026BF0F88005D0079 /* AppDelegate.swift in Sources */,
 				03984D8226BF0F88005D0079 /* SceneDelegate.swift in Sources */,
 			);
