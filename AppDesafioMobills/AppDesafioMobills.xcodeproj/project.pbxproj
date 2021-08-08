@@ -15,6 +15,9 @@
 		03984D8C26BF0F8A005D0079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8B26BF0F8A005D0079 /* Assets.xcassets */; };
 		03984D8F26BF0F8A005D0079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03984D8D26BF0F8A005D0079 /* LaunchScreen.storyboard */; };
 		03984DBA26BF12E8005D0079 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03984DB926BF12E8005D0079 /* GoogleService-Info.plist */; };
+		03984DC226BF8B7F005D0079 /* AddExpenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984DC126BF8B7F005D0079 /* AddExpenditure.swift */; };
+		03984DC626BF942C005D0079 /* Expenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984DC526BF942C005D0079 /* Expenditure.swift */; };
+		03984DC826BF9669005D0079 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984DC726BF9669005D0079 /* LoginVM.swift */; };
 		9D14A06D4B9B160E20B72F18 /* Pods_AppDesafioMobills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		03984D8E26BF0F8A005D0079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03984D9026BF0F8A005D0079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03984DB926BF12E8005D0079 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03984DC126BF8B7F005D0079 /* AddExpenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenditure.swift; sourceTree = "<group>"; };
+		03984DC526BF942C005D0079 /* Expenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenditure.swift; sourceTree = "<group>"; };
+		03984DC726BF9669005D0079 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.release.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.release.xcconfig"; sourceTree = "<group>"; };
 		C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppDesafioMobills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.debug.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 		03984D7E26BF0F88005D0079 /* AppDesafioMobills */ = {
 			isa = PBXGroup;
 			children = (
+				03984DC426BF93B9005D0079 /* Model */,
+				03984DC326BF93A4005D0079 /* ViewModel */,
 				03984DC026BF6D92005D0079 /* ScreensVC */,
 				03984D7F26BF0F88005D0079 /* AppDelegate.swift */,
 				03984D8126BF0F88005D0079 /* SceneDelegate.swift */,
@@ -84,8 +92,25 @@
 			isa = PBXGroup;
 			children = (
 				03984D8326BF0F88005D0079 /* LoginVC.swift */,
+				03984DC126BF8B7F005D0079 /* AddExpenditure.swift */,
 			);
 			path = ScreensVC;
+			sourceTree = "<group>";
+		};
+		03984DC326BF93A4005D0079 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				03984DC726BF9669005D0079 /* LoginVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03984DC426BF93B9005D0079 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03984DC526BF942C005D0079 /* Expenditure.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ACBF558CD0F8287FBBFFDF35 /* Frameworks */ = {
@@ -220,10 +245,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03984DC826BF9669005D0079 /* LoginVM.swift in Sources */,
 				03984D8A26BF0F88005D0079 /* AppDesafioMobills.xcdatamodeld in Sources */,
 				03984D8426BF0F88005D0079 /* LoginVC.swift in Sources */,
 				03984D8026BF0F88005D0079 /* AppDelegate.swift in Sources */,
+				03984DC226BF8B7F005D0079 /* AddExpenditure.swift in Sources */,
 				03984D8226BF0F88005D0079 /* SceneDelegate.swift in Sources */,
+				03984DC626BF942C005D0079 /* Expenditure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

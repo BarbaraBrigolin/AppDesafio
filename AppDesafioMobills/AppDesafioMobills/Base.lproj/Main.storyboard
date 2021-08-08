@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,10 +39,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dzF-gr-5oq">
-                                <rect key="frame" x="344" y="245" width="40" height="40"/>
+                                <rect key="frame" x="324" y="245" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="r8c-K6-OqB"/>
-                                    <constraint firstAttribute="width" constant="40" id="rti-Se-h1y"/>
+                                    <constraint firstAttribute="width" constant="60" id="rti-Se-h1y"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-Zv-daz">
@@ -91,13 +92,34 @@
                         <outlet property="emailTextField" destination="gsv-qs-fRe" id="yv6-bG-bQB"/>
                         <outlet property="enterButton" destination="W4m-Zv-daz" id="jaN-0g-7W6"/>
                         <outlet property="loginLabel" destination="MWm-RC-5oD" id="8sE-Ns-5Nb"/>
-                        <outlet property="passwordTextField" destination="qkJ-Re-fMa" id="Bib-1U-lID"/>
+                        <outlet property="passwordTextField" destination="qkJ-Re-fMa" id="8HS-hp-m6j"/>
                         <outlet property="textSafeImageView" destination="dzF-gr-5oq" id="7ic-5u-S1k"/>
+                        <segue destination="fXf-UR-8XM" kind="presentation" identifier="AddExpenditure" id="UGS-vd-KAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="50.892857142857139"/>
         </scene>
+        <!--Add Expenditure-->
+        <scene sceneID="JRg-wZ-ObJ">
+            <objects>
+                <viewController id="fXf-UR-8XM" customClass="AddExpenditure" customModule="AppDesafioMobills" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH2-aD-0fg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0wn-HC-zJs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-Qo-nt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="51"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
