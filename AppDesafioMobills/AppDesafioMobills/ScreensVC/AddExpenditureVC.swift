@@ -101,6 +101,8 @@ extension AddExpenditureVC:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        
 //        var textField = UITextField()
 //        let alert = UIAlertController(title: "Alterar nome da lista/ item", message: "", preferredStyle: .alert)
 //        let action = UIAlertAction(title: "Atualizar Item", style: .default) { (action) in
