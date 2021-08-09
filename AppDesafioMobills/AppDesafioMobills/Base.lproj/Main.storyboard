@@ -232,11 +232,121 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="W2U-up-K6f" id="5mY-OI-Pxj"/>
+                        <segue destination="75o-u1-MnQ" kind="presentation" identifier="DetailsVC" id="WCl-kb-Ya9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tF-Qo-nt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="51"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="6ZB-bc-xOp">
+            <objects>
+                <viewController id="75o-u1-MnQ" customClass="DetailsVC" customModule="AppDesafioMobills" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcw-hG-9y0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Despesas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-yB-14P">
+                                <rect key="frame" x="20" y="30" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-B6-PkH">
+                                <rect key="frame" x="20" y="89" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Fz-20-mTa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-yH-sPY">
+                                <rect key="frame" x="20" y="169" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PCU-io-xcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-Wp-RHL">
+                                <rect key="frame" x="20" y="249" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mxV-xO-3zh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data da conta " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-Mr-h0C">
+                                <rect key="frame" x="20" y="329" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="f4F-jU-f7N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A conta já foi paga?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmX-XT-623">
+                                <rect key="frame" x="20" y="409" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-Lt-iJS">
+                                <rect key="frame" x="335" y="409" width="51" height="31"/>
+                                <connections>
+                                    <action selector="tappedPaidAccountSwitch:" destination="75o-u1-MnQ" eventType="valueChanged" id="pxZ-fm-x99"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-0m-sEc">
+                                <rect key="frame" x="20" y="510" width="374" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Cadastrar Button"/>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="75o-u1-MnQ" eventType="touchUpInside" id="A2I-3e-mni"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BLj-AX-EfR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciK-0m-sEc" firstAttribute="leading" secondItem="BLj-AX-EfR" secondAttribute="leading" constant="20" id="1nX-7O-CmU"/>
+                            <constraint firstItem="ecG-Mr-h0C" firstAttribute="top" secondItem="rzx-Wp-RHL" secondAttribute="bottom" constant="30" id="6z9-2v-3QY"/>
+                            <constraint firstItem="zrF-B6-PkH" firstAttribute="leading" secondItem="bjv-yB-14P" secondAttribute="leading" id="EXy-h2-YQl"/>
+                            <constraint firstItem="ecG-Mr-h0C" firstAttribute="leading" secondItem="bjv-yB-14P" secondAttribute="leading" id="Fhr-vv-lGB"/>
+                            <constraint firstItem="Oz4-Lt-iJS" firstAttribute="top" secondItem="ecG-Mr-h0C" secondAttribute="bottom" constant="30" id="HUO-Jw-m9S"/>
+                            <constraint firstItem="BLj-AX-EfR" firstAttribute="trailing" secondItem="bjv-yB-14P" secondAttribute="trailing" constant="20" id="JHa-Ay-gOf"/>
+                            <constraint firstItem="BLj-AX-EfR" firstAttribute="trailing" secondItem="Oz4-Lt-iJS" secondAttribute="trailing" constant="30" id="JMY-7m-13H"/>
+                            <constraint firstItem="nJ1-yH-sPY" firstAttribute="trailing" secondItem="bjv-yB-14P" secondAttribute="trailing" id="NNY-2I-0yy"/>
+                            <constraint firstItem="nJ1-yH-sPY" firstAttribute="leading" secondItem="bjv-yB-14P" secondAttribute="leading" id="QWb-Pk-2jh"/>
+                            <constraint firstItem="zrF-B6-PkH" firstAttribute="top" secondItem="bjv-yB-14P" secondAttribute="bottom" constant="30" id="Snc-HF-pUH"/>
+                            <constraint firstItem="rzx-Wp-RHL" firstAttribute="trailing" secondItem="bjv-yB-14P" secondAttribute="trailing" id="WCX-92-PcM"/>
+                            <constraint firstItem="zrF-B6-PkH" firstAttribute="trailing" secondItem="bjv-yB-14P" secondAttribute="trailing" id="Xdp-vh-1DI"/>
+                            <constraint firstItem="zmX-XT-623" firstAttribute="leading" secondItem="BLj-AX-EfR" secondAttribute="leading" constant="20" id="aIx-nS-qbx"/>
+                            <constraint firstItem="bjv-yB-14P" firstAttribute="leading" secondItem="BLj-AX-EfR" secondAttribute="leading" constant="20" id="bYk-5F-Qt8"/>
+                            <constraint firstItem="zmX-XT-623" firstAttribute="top" secondItem="ecG-Mr-h0C" secondAttribute="bottom" constant="30" id="dse-tU-uQW"/>
+                            <constraint firstItem="bjv-yB-14P" firstAttribute="top" secondItem="BLj-AX-EfR" secondAttribute="top" constant="30" id="eNa-lW-YdD"/>
+                            <constraint firstItem="BLj-AX-EfR" firstAttribute="trailing" secondItem="ciK-0m-sEc" secondAttribute="trailing" constant="20" id="eg5-Rw-Rzj"/>
+                            <constraint firstItem="ecG-Mr-h0C" firstAttribute="trailing" secondItem="bjv-yB-14P" secondAttribute="trailing" id="mrw-y7-NE8"/>
+                            <constraint firstItem="rzx-Wp-RHL" firstAttribute="top" secondItem="nJ1-yH-sPY" secondAttribute="bottom" constant="30" id="o6s-NH-n5E"/>
+                            <constraint firstItem="nJ1-yH-sPY" firstAttribute="top" secondItem="zrF-B6-PkH" secondAttribute="bottom" constant="30" id="wlv-2Y-2zq"/>
+                            <constraint firstItem="ciK-0m-sEc" firstAttribute="top" secondItem="Oz4-Lt-iJS" secondAttribute="bottom" constant="70" id="yP1-LX-Qjt"/>
+                            <constraint firstItem="rzx-Wp-RHL" firstAttribute="leading" secondItem="bjv-yB-14P" secondAttribute="leading" id="zcb-np-ndv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountAmountLabel" destination="nJ1-yH-sPY" id="sp2-9d-cpx"/>
+                        <outlet property="accountDateLabel" destination="ecG-Mr-h0C" id="jUC-fB-4cb"/>
+                        <outlet property="accountDescriptionLabel" destination="rzx-Wp-RHL" id="zRV-Rf-yuX"/>
+                        <outlet property="accountNameLabel" destination="zrF-B6-PkH" id="whY-0r-ANT"/>
+                        <outlet property="addExpenseLabel" destination="bjv-yB-14P" id="HfL-an-4by"/>
+                        <outlet property="paidAccountLabel" destination="zmX-XT-623" id="aJd-Iw-TZh"/>
+                        <outlet property="paidAccountSwitch" destination="Oz4-Lt-iJS" id="Xfm-TZ-mNy"/>
+                        <outlet property="registerButton" destination="ciK-0m-sEc" id="1IJ-HN-g1I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvu-n0-HY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="51"/>
         </scene>
     </scenes>
     <resources>

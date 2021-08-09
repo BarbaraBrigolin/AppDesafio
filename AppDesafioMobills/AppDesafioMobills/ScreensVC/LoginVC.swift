@@ -34,7 +34,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.auth = Auth.auth()
-        self.emailTextField.text = "barbarab@hotmail.com"
+        self.emailTextField.text = "barbarabrigolin@hotmail.com"
         self.passwordTextField.text = "12345678"
         
         self.configElementsUI()

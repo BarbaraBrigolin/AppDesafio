@@ -21,6 +21,7 @@
 		03984DCC26C019A1005D0079 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984DCA26C019A1005D0079 /* CustomTableViewCell.swift */; };
 		03984DCD26C019A1005D0079 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03984DCB26C019A1005D0079 /* CustomTableViewCell.xib */; };
 		03984DCF26C0AD00005D0079 /* RegisterEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984DCE26C0AD00005D0079 /* RegisterEmailVC.swift */; };
+		03984E0226C1DCAE005D0079 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03984E0126C1DCAE005D0079 /* DetailsVC.swift */; };
 		9D14A06D4B9B160E20B72F18 /* Pods_AppDesafioMobills.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		03984DCA26C019A1005D0079 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		03984DCB26C019A1005D0079 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		03984DCE26C0AD00005D0079 /* RegisterEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailVC.swift; sourceTree = "<group>"; };
+		03984E0126C1DCAE005D0079 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		55E53225000B1AE802C66EAA /* Pods-AppDesafioMobills.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.release.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.release.xcconfig"; sourceTree = "<group>"; };
 		C03C34B9BEFBA293CDA5E0BD /* Pods_AppDesafioMobills.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppDesafioMobills.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF8C1936FEB2C5254A849B4E /* Pods-AppDesafioMobills.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppDesafioMobills.debug.xcconfig"; path = "Target Support Files/Pods-AppDesafioMobills/Pods-AppDesafioMobills.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				03984DCE26C0AD00005D0079 /* RegisterEmailVC.swift */,
 				03984D8326BF0F88005D0079 /* LoginVC.swift */,
 				03984DC126BF8B7F005D0079 /* AddExpenditureVC.swift */,
+				03984E0126C1DCAE005D0079 /* DetailsVC.swift */,
 			);
 			path = ScreensVC;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				03984DC226BF8B7F005D0079 /* AddExpenditureVC.swift in Sources */,
 				03984D8226BF0F88005D0079 /* SceneDelegate.swift in Sources */,
 				03984DC626BF942C005D0079 /* Expenditure.swift in Sources */,
+				03984E0226C1DCAE005D0079 /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
