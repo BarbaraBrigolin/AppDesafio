@@ -10,7 +10,7 @@ import Foundation
 struct Expenditure {
     
     var expenditure:String
-    var value:Int
+    var value:Double
     var description:String
     var paid:Bool
     
