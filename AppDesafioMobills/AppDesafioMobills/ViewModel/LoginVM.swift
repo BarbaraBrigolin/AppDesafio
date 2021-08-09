@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class LoginVM{
+    
+    private var dataItems: [Expenditure] = []
+    public var getArrayItems: [Expenditure] = []
+    
+    
+    
+    
+}
