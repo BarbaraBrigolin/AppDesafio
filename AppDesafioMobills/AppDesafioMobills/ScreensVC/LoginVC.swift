@@ -88,7 +88,7 @@ class LoginVC: UIViewController {
     @IBAction func tappedEnterButton(_ sender: UIButton) {
         
         let email:String = self.emailTextField.text ?? ""
-        let password:String = self.emailTextField.text ?? ""
+        let password:String = self.passwordTextField.text ?? ""
         
         self.auth?.signIn(withEmail: email, password: password, completion: { user, error in
             
@@ -104,6 +104,7 @@ class LoginVC: UIViewController {
                     print("problema inesperado")
                 }else{
                     print("login feito com sucesso ")
+                    
                     self.performSegue(withIdentifier: "AddExpenditureVC", sender: nil)
                 }
             }

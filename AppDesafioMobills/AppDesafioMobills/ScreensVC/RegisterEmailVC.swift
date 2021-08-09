@@ -76,7 +76,7 @@ class RegisterEmailVC: UIViewController {
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
         let email:String = self.emailTextField.text ?? ""
-        let password:String = self.emailTextField.text ?? ""
+        let password:String = self.passwordTextField.text ?? ""
         
         
         self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
@@ -89,9 +89,6 @@ class RegisterEmailVC: UIViewController {
         })
         
     }
-    
-    
-
 }
 extension RegisterEmailVC:UITextFieldDelegate{
     
