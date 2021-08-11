@@ -6,13 +6,14 @@
 //
 
 import UIKit
-import CoreData
+
 
 class AddExpenditureVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-   
+    var expenditureArray: [Expenditure] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,17 +26,15 @@ class AddExpenditureVC: UIViewController {
         self.tableView.dataSource = self
         self.tableView.register(CustomTableViewCell.nib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
-    
 
-
-    
     @IBAction func tappedAddItemButton(_ sender: UIBarButtonItem) {
-
-        self.performSegue(withIdentifier: "DetailsVC", sender: nil)
         
+        let detail: DetailsVC? = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC
+        if let _detail = detail{
+            _detail.delegate = self
+            self.present(_detail, animated: true, completion: nil)
+        }
     }
-    
-
 }
 
 extension AddExpenditureVC:UITableViewDelegate, UITableViewDataSource{
@@ -43,7 +42,7 @@ extension AddExpenditureVC:UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return 10
+        return self.expenditureArray.count
         
     }
 
@@ -51,16 +50,33 @@ extension AddExpenditureVC:UITableViewDelegate, UITableViewDataSource{
         
         let cell = self.tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
         
+        cell?.setupCell(setup: self.expenditureArray[indexPath.row])
 
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-
+        print("cliquei na cell")
         
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            tableView.beginUpdates()
+            self.expenditureArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
 
+}
 
-
+extension AddExpenditureVC: PassDataToDatailsVCDelegate{
+    func tappedAddItemButtonDelegate(type: Expenditure) {
+        
+        self.expenditureArray.append(type)
+        DispatchQueue.main.async() {
+            self.tableView.reloadData()
+        }
+    }
 }

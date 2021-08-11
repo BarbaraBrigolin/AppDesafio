@@ -37,10 +37,10 @@ class CustomTableViewCell: UITableViewCell {
 
   
     
-    func sutupCll(setup:Expenditure){
+    public func setupCell(setup:Expenditure){
         
         self.expenditureLabel.text = setup.expenditure
-        self.valueLabel.text = "\(setup.value)"
+        self.valueLabel.text = "R$\(setup.value)"
         self.descriptionLabel.text = setup.description
         self.dateLabel.text = "\(setup.paid)"
         self.paidLabel.text = "\(setup.date)"
