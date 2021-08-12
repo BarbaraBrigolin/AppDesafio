@@ -10,7 +10,7 @@ import UIKit
 protocol PassDataToDatailsVCDelegate: AnyObject{
     
     func tappedAddItemButtonDelegate(type:Expenditure)
-    
+    func updateItem(data:Expenditure)
 }
 
 class DetailsVC: UIViewController {
@@ -34,7 +34,7 @@ class DetailsVC: UIViewController {
     
    
     weak var delegate: PassDataToDatailsVCDelegate?
-    
+    public var elemented:Expenditure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,9 @@ class DetailsVC: UIViewController {
         self.accountDescriptionTextField.delegate = self
         self.accountDateTextField.delegate = self
         
+        self.accountAmountTextField.keyboardType = UIKeyboardType.decimalPad
+        self.accountDateTextField.keyboardType = UIKeyboardType.numberPad
+        
     }
     
     func configSwitch(){
@@ -64,13 +67,15 @@ class DetailsVC: UIViewController {
         
         let expenditureAdd = Expenditure(expenditure: self.accountNameTextField.text ?? "", value: Double(self.accountAmountTextField.text ?? "") ?? 0.0, description: self.accountDescriptionTextField.text ?? "", paid: self.paidAccountSwitch.isOn, date: Int(self.accountDateTextField.text ?? "") ?? 0)
         
-        delegate?.tappedAddItemButtonDelegate(type: expenditureAdd)
+        if self.elemented != nil{
+            self.delegate?.updateItem(data: expenditureAdd)
+        }else{
+            self.delegate?.tappedAddItemButtonDelegate(type: expenditureAdd)
+        }
+        
         self.dismiss(animated: true, completion: nil)
         
     }
-    
-    
-    
     
 }
 
