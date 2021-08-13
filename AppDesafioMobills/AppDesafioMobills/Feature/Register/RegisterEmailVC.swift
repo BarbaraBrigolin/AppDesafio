@@ -46,7 +46,6 @@ class RegisterEmailVC: UIViewController {
         self.registerButton.layer.borderColor = UIColor.white.cgColor
     }
     
-    
     func configSecureText(){
         
         self.passwordTextField.isSecureTextEntry = true
@@ -72,7 +71,6 @@ class RegisterEmailVC: UIViewController {
         }
     }
 
-    
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
         let email:String = self.emailTextField.text ?? ""
@@ -87,7 +85,6 @@ class RegisterEmailVC: UIViewController {
                 print("Cadastro realizado")
             }
         })
-        
     }
 }
 extension RegisterEmailVC:UITextFieldDelegate{

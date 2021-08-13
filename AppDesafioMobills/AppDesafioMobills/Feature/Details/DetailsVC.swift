@@ -52,10 +52,8 @@ class DetailsVC: UIViewController {
         self.accountNameTextField.delegate = self
         self.accountAmountTextField.delegate = self
         self.accountDescriptionTextField.delegate = self
-//        self.accountDateTextField.delegate = self
-        
+
         self.accountAmountTextField.keyboardType = UIKeyboardType.decimalPad
-//        5
         self.accountDateTextField.inputAccessoryView = self.criateToolBar()
         
     }

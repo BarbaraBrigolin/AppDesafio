@@ -10,7 +10,6 @@ import Firebase
 
 class LoginVC: UIViewController {
 
-    
     @IBOutlet weak var loginLabel: UILabel!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,34 +22,24 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var alertTextLabel: UILabel!
     
-    
-    
-    
     var iconClick:Bool = false
     
     var auth:Auth?
  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.auth = Auth.auth()
-        self.emailTextField.text = "barbarabrigolin@hotmail.com"
-        self.passwordTextField.text = "12345678"
-        
         self.configElementsUI()
         self.configTextField()
         self.configSecureText()
-      
     }
     
     func configTextField(){
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
-      
     }
     
     func configElementsUI(){
-        
         self.enterButton.layer.cornerRadius = 5
         self.enterButton.layer.borderWidth = 1
         self.enterButton.layer.borderColor = UIColor.white.cgColor
@@ -61,7 +50,6 @@ class LoginVC: UIViewController {
     }
     
     func configSecureText(){
-        
         self.passwordTextField.isSecureTextEntry = true
         self.textSafeImageView.image = UIImage(named: "mostrarImage")
         
@@ -86,12 +74,10 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func tappedEnterButton(_ sender: UIButton) {
-        
         let email:String = self.emailTextField.text ?? ""
         let password:String = self.passwordTextField.text ?? ""
         
         self.auth?.signIn(withEmail: email, password: password, completion: { user, error in
-            
             
             if error != nil {
                 
@@ -109,26 +95,17 @@ class LoginVC: UIViewController {
                 }
             }
         })
-        
     }
-    
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        
         self.performSegue(withIdentifier: "RegisterEmailVC", sender: nil)
     }
-    
 }
 
 extension LoginVC:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("cliquei no return")
-        
         return textField.resignFirstResponder()
     }
-    
 }
-
-
-
