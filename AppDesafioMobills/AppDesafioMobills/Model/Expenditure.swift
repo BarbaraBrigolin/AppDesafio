@@ -13,6 +13,6 @@ struct Expenditure {
     var value:Double
     var description:String
     var paid:Bool
-    var date:Int
+    var date:String
     
 }

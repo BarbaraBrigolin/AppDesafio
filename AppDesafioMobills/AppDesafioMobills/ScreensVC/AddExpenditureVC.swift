@@ -12,7 +12,8 @@ class AddExpenditureVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel:AddExpenditureVM = AddExpenditureVM()
+    let viewModel: AddExpenditureVM = AddExpenditureVM()
+    let dataDetail: DetailsVC = DetailsVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +65,8 @@ extension AddExpenditureVC:UITableViewDelegate, UITableViewDataSource{
             self.viewModel.setIndexOfEdit(index: indexPath.row)
             self.present(_detail, animated: true, completion: nil)
         }
-        
+       
+
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

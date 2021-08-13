@@ -18,6 +18,7 @@ class AddExpenditureVM {
     }
     
     public var countList:Int{
+        
         return self.expenditureArray.count
     }
     

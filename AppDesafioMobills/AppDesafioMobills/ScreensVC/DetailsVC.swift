@@ -35,12 +35,14 @@ class DetailsVC: UIViewController {
    
     weak var delegate: PassDataToDatailsVCDelegate?
     public var elemented:Expenditure?
+    let dataPicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configTextField()
         self.configSwitch()
+        self.configElementsUi()
     }
     
     func configTextField(){
@@ -48,15 +50,70 @@ class DetailsVC: UIViewController {
         self.accountNameTextField.delegate = self
         self.accountAmountTextField.delegate = self
         self.accountDescriptionTextField.delegate = self
-        self.accountDateTextField.delegate = self
+//        self.accountDateTextField.delegate = self
         
         self.accountAmountTextField.keyboardType = UIKeyboardType.decimalPad
-        self.accountDateTextField.keyboardType = UIKeyboardType.numberPad
+//        5
+        self.accountDateTextField.inputAccessoryView = self.criateToolBar()
+        
+    }
+    
+    func configElementsUi(){
+        self.registerButton.layer.cornerRadius = 5
+        self.registerButton.layer.borderWidth = 1
+        self.registerButton.layer.borderColor = UIColor.white.cgColor
         
     }
     
     func configSwitch(){
         self.paidAccountSwitch.isOn = false
+    }
+    
+    func atualizarUI(){
+        self.addExpenseLabel.text = "Alterar Despesas"
+        self.registerButton.setTitle("Alterar", for: .normal)
+    }
+    
+//    4
+    func criateToolBar() -> UIToolbar{
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneClick))
+        toolbar.setItems([done], animated: true)
+        
+        return toolbar
+    }
+//    3
+    @objc func doneClick(){
+        let dataFormater = DateFormatter()
+        dataFormater.dateStyle = .medium
+        dataFormater.timeStyle = .none
+        
+        self.accountDateTextField.text = dataFormater.string(from: dataPicker.date)
+        self.view.endEditing(true)
+        
+    }
+    
+ 
+//    1
+    @objc func showDateTextField(sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        self.accountDateTextField.text = formatter.string(from: sender.date)
+    }
+
+//    2
+    @IBAction func tappedDateTextField(_ sender: UITextField) {
+        
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        datePickerView.locale = NSLocale.init(localeIdentifier: "pt-br") as Locale
+        datePickerView.preferredDatePickerStyle = .wheels
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(showDateTextField(sender:)), for: .valueChanged)
+        
     }
     
     @IBAction func tappedPaidAccountSwitch(_ sender: UISwitch) {
@@ -65,7 +122,7 @@ class DetailsVC: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
-        let expenditureAdd = Expenditure(expenditure: self.accountNameTextField.text ?? "", value: Double(self.accountAmountTextField.text ?? "") ?? 0.0, description: self.accountDescriptionTextField.text ?? "", paid: self.paidAccountSwitch.isOn, date: Int(self.accountDateTextField.text ?? "") ?? 0)
+        let expenditureAdd = Expenditure(expenditure: self.accountNameTextField.text ?? "", value: Double(self.accountAmountTextField.text ?? "") ?? 0.0, description: self.accountDescriptionTextField.text ?? "", paid: self.paidAccountSwitch.isOn, date: self.accountDateTextField.text ?? "")
         
         if self.elemented != nil{
             self.delegate?.updateItem(data: expenditureAdd)

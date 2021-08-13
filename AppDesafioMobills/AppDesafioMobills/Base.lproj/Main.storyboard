@@ -247,13 +247,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar Despesas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjv-yB-14P">
-                                <rect key="frame" x="20" y="74" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="20" y="74" width="374" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-B6-PkH">
-                                <rect key="frame" x="20" y="133" width="374" height="50"/>
+                                <rect key="frame" x="20" y="135.5" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4Fz-20-mTa"/>
                                 </constraints>
@@ -261,7 +261,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJ1-yH-sPY">
-                                <rect key="frame" x="20" y="213" width="374" height="50"/>
+                                <rect key="frame" x="20" y="215.5" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PCU-io-xcg"/>
                                 </constraints>
@@ -269,7 +269,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição da conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-Wp-RHL">
-                                <rect key="frame" x="20" y="293" width="374" height="50"/>
+                                <rect key="frame" x="20" y="295.5" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mxV-xO-3zh"/>
                                 </constraints>
@@ -277,36 +277,44 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data da conta " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ecG-Mr-h0C">
-                                <rect key="frame" x="20" y="373" width="374" height="50"/>
+                                <rect key="frame" x="20" y="375.5" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="f4F-jU-f7N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tappedDateTextField:" destination="75o-u1-MnQ" eventType="editingDidEnd" id="Hom-vd-sOi"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A conta já foi paga?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmX-XT-623">
-                                <rect key="frame" x="20" y="453" width="149" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="455.5" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oz4-Lt-iJS">
-                                <rect key="frame" x="335" y="453" width="51" height="31"/>
+                                <rect key="frame" x="335" y="455.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="tappedPaidAccountSwitch:" destination="75o-u1-MnQ" eventType="valueChanged" id="pxZ-fm-x99"/>
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciK-0m-sEc">
-                                <rect key="frame" x="20" y="554" width="374" height="38"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Cadastrar Button"/>
+                                <rect key="frame" x="20" y="556.5" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JVC-HE-Fha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Cadastrar Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="tappedRegisterButton:" destination="75o-u1-MnQ" eventType="touchUpInside" id="A2I-3e-mni"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BLj-AX-EfR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.50980395079999996" green="0.87058818339999999" blue="0.83529412749999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ciK-0m-sEc" firstAttribute="leading" secondItem="BLj-AX-EfR" secondAttribute="leading" constant="20" id="1nX-7O-CmU"/>
                             <constraint firstItem="ecG-Mr-h0C" firstAttribute="top" secondItem="rzx-Wp-RHL" secondAttribute="bottom" constant="30" id="6z9-2v-3QY"/>
