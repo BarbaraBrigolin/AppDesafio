@@ -91,6 +91,6 @@ extension RegisterEmailVC:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        return self.resignFirstResponder()
+        return textField.resignFirstResponder()
     }
 }
