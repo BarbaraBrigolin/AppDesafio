@@ -119,13 +119,8 @@ class DetailsVC: UIViewController {
     }
     
     @IBAction func tappedPaidAccountSwitch(_ sender: UISwitch) {
-        
-        if sender.isOn == true{
-            self.dataCustomTableViewCell.dateLabel.text = "Conta Paga"
-        }else{
-            self.dataCustomTableViewCell.dateLabel.text = "Conta a Pagar"
-        }
-        
+
+
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {

@@ -42,8 +42,16 @@ class CustomTableViewCell: UITableViewCell {
         self.expenditureLabel.text = setup.expenditure
         self.valueLabel.text = "R$\(setup.value)"
         self.descriptionLabel.text = setup.description
-        self.dateLabel.text = "\(setup.paid)"
-        self.paidLabel.text = "\(setup.date)"
+        
+        if setup.paid  == true{
+            self.paidLabel.text = "Conta Paga"
+        }else{
+            self.paidLabel.text = "Conta a Pagar"
+        }
+        
+        self.dateLabel.text = "\(setup.date)"
+        
+        
     }
     
 }
